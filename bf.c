@@ -13,7 +13,6 @@ int main(void) {
     for (int cmd = 0; cmd < length; cmd++) {
         if (code[cmd] == '>') {
             pointer++;
-            //printf("%i", pointer);
         }
         else if (code[cmd] == '<') {
             pointer--;
@@ -25,13 +24,7 @@ int main(void) {
             mem[pointer]--;
         }
         else if (code[cmd] == '.') {
-            //added ! because i'm pretty sure the <> signs are inversed
-            if (!(mem[pointer] > 31 && mem[pointer < 127])) {
-            printf("%c\n", mem[pointer]);
-            }
-            else {
-                printf("invalid ascii output");
-            }
+            printf("%c", mem[pointer]);
         }
         else if (code[cmd] == ',') {
             scanf("%i", mem[pointer]);
