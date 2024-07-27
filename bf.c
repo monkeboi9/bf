@@ -11,26 +11,27 @@ int main(void) {
     scanf("%s", &code);
     int length = strlen(code);
     for (int cmd = 0; cmd < length; cmd++) {
-        if (code[cmd] == '>') {
-            pointer++;
-        }
-        else if (code[cmd] == '<') {
-            pointer--;
-        }
-        else if (code[cmd] == '+') {
-            mem[pointer]++;
-        }
-        else if (code[cmd] == '-') {
-            mem[pointer]--;
-        }
-        else if (code[cmd] == '.') {
-            printf("%c", mem[pointer]);
-        }
-        else if (code[cmd] == ',') {
-            scanf("%i", mem[pointer]);
-        }
-        else {
-        }
-    }
+        switch (code[cmd]) {
+            case '>': 
+                pointer++;
+                break;
+            case '<':
+                pointer--;
+                break;
+            case '+':
+                mem[pointer]++;
+                break;
+            case '-':
+                mem[pointer]--;
+                break;
+            case '.':
+                printf("%c", mem[pointer]);
+                break;
+            case ',':
+                scanf("%d", mem[pointer]);
+				break;
+			}
+
+    	}
 printf("\n");
 }
