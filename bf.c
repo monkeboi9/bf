@@ -28,7 +28,7 @@ int main(void) {
                 printf("%c", mem[pointer]);
                 break;
             case ',':
-                scanf("%d", mem[pointer]);
+                scanf("%d", &mem[pointer]);
 				break;
 			}
 
