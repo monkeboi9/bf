@@ -11,9 +11,9 @@ int main(void) {
     // a int that represents the selected cell in the variable "mem"
     int pointer = 0;
     // this enables open bracket mode where it skips code until it reaches after a closed bracket
-    bool openb = false;
+    bool obrk = false;
     // this enables closed bracket mode where it reverses the direction of the loop until it reaches a open bracket
-     bool closedb = false;
+     bool cbrk = false;
     printf("Monkeboi's BrainFuck interpereter v0.2\n: ");
     scanf("%s", &code);
     int length = strlen(code);
@@ -21,7 +21,7 @@ int main(void) {
             switch (code[cmd]) {
                 case '[':
                     if (mem[pointer] != 0) {
-                        openb = true;
+                        obrk = true;
                         break;
                     }
                     else {
@@ -29,7 +29,7 @@ int main(void) {
                     }
                 case ']':
                     if (mem[pointer] > 0) {
-                        closedb = true;
+                        cbrk = true;
                         break;
                     }
                     else {
