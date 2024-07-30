@@ -6,7 +6,7 @@ int main(void) {
     // number of cells
     int mem[128] = {0};
     // amount of characters the code can be. this can be changed
-    char code[512] = {0};
+    char code[256] = {0};
     // this represents what character in the code is currently selected.
     int cmd = 0;
     // a int that represents the selected cell in the variable "mem"
