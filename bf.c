@@ -62,7 +62,7 @@ int main(void) {
                 putchar(mem[pointer]);
                 break;
             case ',':
-                mem[pointer] = getchar();
+                scanf("%d", &mem[pointer]);
                 break;
         }
         cmd++;
